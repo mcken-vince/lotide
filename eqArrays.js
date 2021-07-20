@@ -6,8 +6,6 @@ const assertEqual = (actual, expected) => {
   }
 };
 
-// input: two arrays
-// compares the two arrays, returns true if they are exactly the same, false if not
 const eqArrays = (arr1, arr2) => {
   for (let x = 0; x < arr1.length; x++) {
     if (arr1[x] !== arr2[x]) {
@@ -16,7 +14,6 @@ const eqArrays = (arr1, arr2) => {
   }
   return true;
 };
-
 
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
