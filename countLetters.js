@@ -12,6 +12,8 @@ const countLetters = (string) => {
   return letterCount;
 };
 
-console.log(countLetters("hello"));
-console.log(countLetters("hi my name is Vincent"));
-console.log(countLetters("supercalifragilisticexpialidocious"));
+module.exports = countLetters;
+
+// console.log(countLetters("hello"));
+// console.log(countLetters("hi my name is Vincent"));
+// console.log(countLetters("supercalifragilisticexpialidocious"));

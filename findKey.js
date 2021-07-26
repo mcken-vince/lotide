@@ -7,11 +7,13 @@ const findKey = (object, callback) => {
   }
 };
 
-console.log(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 4 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 6 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2)); // => "noma"
+module.exports = findKey;
+
+// console.log(findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 4 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 6 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => x.stars === 2)); // => "noma"
