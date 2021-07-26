@@ -1,6 +1,3 @@
-const assertEqual = require('./assertEqual');
-const eqArrays = require('./eqArrays');
-
 const eqObjects = (obj1, obj2) => {
   if (Object.keys(obj1).length === Object.keys(obj2).length) {
     for (let key in obj1) {
