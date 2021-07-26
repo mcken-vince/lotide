@@ -2,7 +2,7 @@
   "name": "lotide",
   "version": "1.0.0",
   "description": "lotide library",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/mcken-vince/lotide.git"
   },
-  "author": "",
+  "author": "Vincent McKen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mcken-vince/lotide/issues"
