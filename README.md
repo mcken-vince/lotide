@@ -1,5 +1,7 @@
 # Lotide
 
+TEST
+
 A mini clone of the [Lodash](https://lodash.com) library.
 
 ## Purpose
