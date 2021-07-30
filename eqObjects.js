@@ -12,7 +12,7 @@ const eqObjects = (o1, o2) => {
       if (!eqObjects(o1[key], o2[key])) {
         return false;
       }
-    }else if (Array.isArray(o1[key])) {
+    } else if (Array.isArray(o1[key])) {
       console.log(`Array.isArray(o1[key])`);
       if (!eqArrays(o1[key], o2[key])) {
         return false;
