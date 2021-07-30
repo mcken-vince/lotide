@@ -14,4 +14,15 @@ describe('#eqArrays', () => {
   it('should return false given two different arrays of numbers', () => {
     assert.isFalse(eqArrays([5, 4, 3, 2, 1], [5, 4, 7, 8, 9]));
   });
+  it('should return true given two identical arrays with nested arrays inside', () => {
+    assert.isTrue(eqArrays([[2, 3], [4]], [[2, 3], [4]]));
+  });
+  it('should return false given two different arrays with nested arrays', () => {
+    assert.isFalse(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]));
+  });
 });
+
+
+console.log(eqArrays([[2, 3], [4]], [[2, 3], [4]])) // => true
+console.log(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])) // => false
+console.log(eqArrays([[2, 3], [4]], [[2, 3], 4])) // => false
