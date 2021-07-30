@@ -9,15 +9,15 @@ const eqObjects = (o1, o2) => {
     // handles if element is an object
     if (typeof o1[key] === 'object') {
       console.log(`Object.isObject(o1[key])`);
-      return eqObjects(o1[key], o2[key]);
-    }
-    // handles if element is an array
-    if (Array.isArray(o1[key])) {
+      if (!eqObjects(o1[key], o2[key])) {
+        return false;
+      }
+    }else if (Array.isArray(o1[key])) {
       console.log(`Array.isArray(o1[key])`);
-      return eqArrays(o1[key], o2[key]);
-    }
-    // if values are not equal
-    if (o1[key] !== o2[key]) {
+      if (!eqArrays(o1[key], o2[key])) {
+        return false;
+      }
+    } else if (o1[key] !== o2[key]) {
       console.log(`o1[key] !== o2[key] ||| ${o1[key], o2[key]} `);
       return false;
     }
@@ -29,9 +29,9 @@ const eqObjects = (o1, o2) => {
 module.exports = eqObjects;
 
 
-// console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
 
-// console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
-// console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false
 
-// console.log(eqObjects({a: {b: {c: {z: 5}, d: {e: 10}}, f: 8, g: 9}, h: 7}, {a: {b: {c: {z: 5}, d: {e: 10}}, f: 8, g: 9}, h: 7})); // => true
+console.log(eqObjects({a: {b: {c: {z: 5}, d: {e: 10}}, f: 8, g: 9}, h: 7}, {a: {b: {c: {z: 5}, d: {e: 10}}, f: 8, g: 9}, h: 7})); // => true
