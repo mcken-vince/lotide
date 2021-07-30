@@ -8,17 +8,17 @@ const eqObjects = (o1, o2) => {
   for (let key in o1) {
     // handles if element is an object
     if (typeof o1[key] === 'object') {
-      console.log(`Object.isObject(o1[key])`)
+      console.log(`Object.isObject(o1[key])`);
       return eqObjects(o1[key], o2[key]);
     }
     // handles if element is an array
     if (Array.isArray(o1[key])) {
-      console.log(`Array.isArray(o1[key])`)
+      console.log(`Array.isArray(o1[key])`);
       return eqArrays(o1[key], o2[key]);
     }
     // if values are not equal
     if (o1[key] !== o2[key]) {
-      console.log(`o1[key] !== o2[key] ||| ${o1[key], o2[key]} `)
+      console.log(`o1[key] !== o2[key] ||| ${o1[key], o2[key]} `);
       return false;
     }
   }
